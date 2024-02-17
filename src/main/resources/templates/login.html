@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlogSphere-----Login</title>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Use a new gradient color */
+      background: linear-gradient(135deg, #fbd3e9, #bb377d);
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333333;
+      text-align: center;
+      /* Reduce shadow effect */
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666666;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"],
+    button[type="button"] {
+      width: 100%;
+      padding: 10px;
+      color: #ffffff;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background-position 0.3s, color 0.3s;
+      /* Reduce shadow effect */
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      background-color: #007bff;
+      background-image: linear-gradient(135deg, #4facfe, #00f2fe);
+      background-size: 200% 100%;
+      background-position: 100% 0;
+    }
+
+    button[type="submit"]:hover,
+    button[type="button"]:hover {
+      color: #ffffff;
+      background-position: 0 0;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    /* Center message div */
+    .message {
+      position: fixed;
+      top: 15%;
+      left: 49.7%;
+      transform: translate(-50%, -50%);
+      background-color: #f1c27d; /* Beautiful color */
+      padding: 10px;
+      border-radius: 8px;
+      /* Reduce shadow effect */
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    button[type="button"] {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div th:if="${message !=null}" class="message">
+  [[${message}]]
+</div>
+<div class="container">
+  <h1> Welcome to BlogSphere</h1>
+<!--  here its easily redirect to home page because its not a button-->
+  <a th:href="@{'/'}">Again Go Back ?</a>
+
+  <form action="#"
+        th:action="@{/login}"
+        method="POST">
+    <div>
+      <label for="Email">Email</label>
+      <input id="Email" type="email" name="email" placeholder="Email" required/>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password" placeholder="Password" required />
+      <button type="submit">Login!</button>
+    </div>
+  </form>
+  <form action="/" >
+    <button type="submit">Ready to Tour</button>
+  </form>
+
+
+
+
+</div>
+
+</body>
+</html>

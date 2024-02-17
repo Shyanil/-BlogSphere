@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlogSphere-----Register</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Use a yellow gradient color */
+            background: linear-gradient(135deg, #ffdb58, #ffef96);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            /* Add shadow to button text */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            /* Add box shadow */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            /* Add box shadow on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1> Welcome to BlogSphere</h1>
+    <a th:href="@{'/'}">Go Back ?</a>
+    <form action="#"
+          th:action="@{/register}"
+          th:object="${account}"
+          method="POST">
+        <div>
+            <label for="firstname">First Name</label>
+            <input id="firstname" type="text" th:field="*{firstname}" placeholder="First Name"/>
+        </div>
+        <div>
+            <label for="lastname">Last Name</label>
+            <input id="lastname" type="text" th:field="*{lastname}" placeholder="Last Name"/>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="text" th:field="*{email}" placeholder="Email"/>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" th:field="*{password}" placeholder="Password"/>
+        </div>
+        <button type="submit">Register!</button>
+    </form>
+</div>
+</body>
+</html>
