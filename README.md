@@ -4,6 +4,7 @@
 
 ---
 
+
 ## 🚀 Features
 
 - **User-friendly interface**: Enjoy a seamless browsing experience with a clean and intuitive interface.
@@ -13,6 +14,12 @@
 - **Responsive design**: Access BlogSphere from any device with its fully responsive design.
 
 ---
+
+---
+
+🔗 **Access the Live Server:**
+Please note that the live server is currently not secure due to limitations of the hosting provider (Amazon AWS EC2). You can access BlogSphere [here](http://ec2-16-170-206-61.eu-north-1.compute.amazonaws.com:4505/).
+
 
 ## 💻 Technologies Used
 
