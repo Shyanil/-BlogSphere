@@ -78,7 +78,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🚀 Future Upgrades
+## 🚀 Future Upgrades 
 
 1. **Enhanced Interface**: We aim to further refine BlogSphere's interface, ensuring a more intuitive and visually appealing user experience.
    
