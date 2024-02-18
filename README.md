@@ -1,9 +1,12 @@
 <h1 align="center">🌟 BlogSphere 🌟</h1>
 
+
 <p align="center">Welcome to BlogSphere, a beautifully crafted Spring Boot blog application that seamlessly integrates Java for robust backend functionality and HTML&CSS for elegant, responsive design. Dive into a user-friendly interface, featuring easy registration, post management, and community engagement. Experience the power of Java and the artistry of HTML&CSS in a single, cohesive platform.</p>
 
 ---
-
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](link_to_build_status)
+[![Version](https://img.shields.io/badge/version-1.0-blue)](link_to_version)
+[![License](https://img.shields.io/badge/license-MIT-red)](link_to_license)
 
 ## 🚀 Features
 
